@@ -7,32 +7,96 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
+        android:id="@+id/_title_daily_aim"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Daily aim: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/text_daily_aim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/_title_daily_aim"
+        app:layout_constraintTop_toTopOf="@id/_title_daily_aim" />
+
+    <SeekBar
+        android:id="@+id/seekbar_daily_aim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:max="5000"
+        android:min="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_daily_aim" />
+
+    <TextView
+        android:id="@+id/_title_drank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show account info"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Drank today: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekbar_daily_aim" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/text_drank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/_title_drank"
+        app:layout_constraintTop_toTopOf="@id/_title_drank" />
+
+    <TextView
+        android:id="@+id/_title_add_water"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Upload file"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Add water: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_drank" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_250"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="0dp"
+        android:text="250"
+        app:layout_constraintBottom_toBottomOf="@+id/_title_add_water"
+        app:layout_constraintStart_toEndOf="@+id/_title_add_water"
+        app:layout_constraintTop_toTopOf="@+id/_title_add_water" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_300"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="0dp"
+        android:text="300"
+        app:layout_constraintBottom_toBottomOf="@+id/button_add_250"
+        app:layout_constraintStart_toEndOf="@+id/button_add_250"
+        app:layout_constraintTop_toTopOf="@+id/button_add_250" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_350"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="0dp"
+        android:text="350"
+        app:layout_constraintBottom_toBottomOf="@+id/button_add_300"
+        app:layout_constraintStart_toEndOf="@+id/button_add_300"
+        app:layout_constraintTop_toTopOf="@+id/button_add_300" />
 </androidx.constraintlayout.widget.ConstraintLayout>
