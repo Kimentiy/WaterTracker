@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         val drankTodayTextView = findViewById<TextView>(R.id.text_drank)
 
         drankTodayTextView.text = drankToday.valueInMl.toString()
+
+        // showAccountInfo()
     }
 
     private fun showAccountInfo() {
