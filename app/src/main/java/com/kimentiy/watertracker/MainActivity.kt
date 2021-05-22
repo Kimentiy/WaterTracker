@@ -24,17 +24,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val dailyAimTextView = findViewById<TextView>(R.id.text_daily_aim)
-
-        findViewById<SeekBar>(R.id.seekbar_daily_aim).apply {
-            setOnSeekBarChangeListener(SeekBarListener(onValueChanged = {
-                dailyAimTextView.text = it.toString()
-            }))
-        }
-
-        val drankTodayTextView = findViewById<TextView>(R.id.text_drank)
-
-        drankTodayTextView.text = drankToday.valueInMl.toString()
+//        val dailyAimTextView = findViewById<TextView>(R.id.text_daily_aim)
+//
+//        findViewById<SeekBar>(R.id.seekbar_daily_aim).apply {
+//            setOnSeekBarChangeListener(SeekBarListener(onValueChanged = {
+//                dailyAimTextView.text = it.toString()
+//            }))
+//        }
+//
+//        val drankTodayTextView = findViewById<TextView>(R.id.text_drank)
+//
+//        drankTodayTextView.text = drankToday.valueInMl.toString()
 
         // showAccountInfo()
     }
