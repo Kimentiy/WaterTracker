@@ -3,4 +3,7 @@
 
     <string name="add_water">Add water</string>
     <string name="edit_addition_buttons">Edit</string>
+    <string name="water_amount">Water amount:</string>
+    <string name="litre">L</string>
+    <string name="add">Add</string>
 </resources>
