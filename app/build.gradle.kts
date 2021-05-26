@@ -28,11 +28,11 @@ android {
                 "proguard-rules.pro"
             )
             // TODO dublicate
-            buildConfigField("String", "API_KEY", getApiKey())
+            //buildConfigField("String", "API_KEY", getApiKey())
         }
         getByName("debug") {
             // TODO dublicate, see upper
-            buildConfigField("String", "API_KEY", "\"${getApiKey()}\"")
+            //buildConfigField("String", "API_KEY", "\"${getApiKey()}\"")
         }
         // TODO this works in groovy, but not in kotlin dsl. Why???
 //        applicationVariants.forEach { variant ->
@@ -48,14 +48,15 @@ android {
     }
 }
 
-fun getApiKey(): String {
-    val props = Properties()
-    props.load(FileInputStream(File("secrets.properties")))
-    return props["API_KEY"] as String
-}
+//fun getApiKey(): String {
+//    val props = Properties()
+//    props.load(FileInputStream(File("secrets.properties")))
+//    return props["API_KEY"] as String
+//}
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.3.72")
+    // TODO use kotlin_version
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.31")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     implementation("androidx.core:core-ktx:1.3.2")
     implementation("androidx.appcompat:appcompat:1.1.0")

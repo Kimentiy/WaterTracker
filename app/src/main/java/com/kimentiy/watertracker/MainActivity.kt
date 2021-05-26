@@ -13,7 +13,7 @@ import kotlinx.coroutines.withContext
 class MainActivity : AppCompatActivity() {
 
     private val config = DbxRequestConfig.newBuilder("dropbox/java-tutorial").build()
-    private val client = DbxClientV2(config, BuildConfig.API_KEY)
+    private val client = DbxClientV2(config, "BuildConfig.API_KEY")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
